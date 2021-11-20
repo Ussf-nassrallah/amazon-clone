@@ -1,14 +1,19 @@
 import React from "react";
+
 import Navbar from "../Layout/Navbar/Navbar";
+import Banner from "../Components/Banner";
 
 export default function Home() {
     return (
         <>
-            <div className="home">
+            <div className="bg-gray-100">
                 {/* navbar component */}
                 <Navbar />
-                {/* banner component */}
-                <h1>Homepage</h1>
+
+                <main className="max-w-screen-xl mx-auto">
+                    {/* banner component */}
+                    <Banner />
+                </main>
             </div>
         </>
     );
