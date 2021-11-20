@@ -54,7 +54,23 @@ export default function Navbar() {
                 </div>
             </div>
             {/* bottom nav */}
-            <div></div>
+            <div className="bg-amazon_blue-light flex text-white items-center space-x-3 p-2 text-sm">
+                <p className="flex items-center link">
+                    <MenuIcon className="h-6 w-6 mr-2" />
+                    All
+                </p>
+                <p className="link">Prime Video</p>
+                <p className="link">Amazon Business</p>
+                <p className="link">Today's Deals</p>
+                <p className="link hidden lg:inline-flex">Electronics</p>
+                <p className="link hidden lg:inline-flex">Food & Grecery</p>
+                <p className="link hidden lg:inline-flex">Prime</p>
+                <p className="link hidden lg:inline-flex">Buy Again</p>
+                <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
+                <p className="link hidden lg:inline-flex">
+                    Health & Personal Care
+                </p>
+            </div>
         </header>
     );
 }
