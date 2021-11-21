@@ -17,7 +17,7 @@ export default function Navbar() {
                         alt="amazon"
                         width={100}
                         height={40}
-                        objectFit="contain"
+                        objectfit="contain"
                         className="cursor-pointer"
                     />
                 </div>
