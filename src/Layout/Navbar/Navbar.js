@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectItems } from "../../slices/basketSlice";
 
 import {
     MenuIcon,
@@ -8,6 +10,8 @@ import {
 } from "@heroicons/react/outline";
 
 export default function Navbar() {
+    const items = useSelector(selectItems);
+
     return (
         <header className="sticky top-0 z-50">
             {/* top nav */}
@@ -53,7 +57,7 @@ export default function Navbar() {
                         className="relative link flex items-center"
                     >
                         <span className="absolute flex items-center justify-center top-0 right-0 md:right-5 h-4 w-4 bg-yellow-400 text-center font-bold rounded-full text-black">
-                            0
+                            {items.length}
                         </span>
 
                         <ShoppingCartIcon className="h-10" />
