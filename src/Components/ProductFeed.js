@@ -15,22 +15,52 @@ export default function ProductFeed() {
         getProducts();
     }, []);
 
-    const generateProducts = () => {
-        return products.map((product) => (
-            <Product
-                key={product.id}
-                image={product.image}
-                category={product.category}
-                title={product.title}
-                description={product.description}
-                price={product.price}
-            />
-        ));
-    };
+    // const generateProducts = () => {
+    //     return
+    // };
 
     return (
         <section className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-52 mx-auto">
-            {generateProducts()}
+            {products.slice(0, 4).map((product) => (
+                <Product
+                    key={product.id}
+                    image={product.image}
+                    category={product.category}
+                    title={product.title}
+                    description={product.description}
+                    price={product.price}
+                />
+            ))}
+
+            <img
+                src="https://links.papareact.com/dyz"
+                alt=""
+                className="md:col-span-full"
+            />
+
+            <div className="md:col-span-2">
+                {products.slice(4, 5).map((product) => (
+                    <Product
+                        key={product.id}
+                        image={product.image}
+                        category={product.category}
+                        title={product.title}
+                        description={product.description}
+                        price={product.price}
+                    />
+                ))}
+            </div>
+
+            {products.slice(5, products.length).map((product) => (
+                <Product
+                    key={product.id}
+                    image={product.image}
+                    category={product.category}
+                    title={product.title}
+                    description={product.description}
+                    price={product.price}
+                />
+            ))}
         </section>
     );
 }

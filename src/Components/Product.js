@@ -19,16 +19,22 @@ export default function Product({
     const [hasPrime] = useState(Math.random() < 0.5);
 
     return (
-        <div className="relative flex flex-col m-5 bg-white z-30 p-10">
-            <p className="absolute top-2 right-2 text-xs italic text-gray-400">
+        <div className="relative flex flex-col m-5 bg-white z-30 p-5">
+            <p className="absolute top-2 right-2 text-xs italic text-gray-400 md:text-sm">
                 {category}
             </p>
 
             <div className="flex items-start justify-center">
-                <img src={image} width={200} height={200} alt="" />
+                <img
+                    className="object-contain w-52 h-52"
+                    src={image}
+                    width={200}
+                    height={200}
+                    alt=""
+                />
             </div>
 
-            <h4 className="my-3">{title}</h4>
+            <h4 className="my-3 md:text-lg">{title}</h4>
 
             <div className="flex">
                 {Array(rating)
@@ -38,9 +44,11 @@ export default function Product({
                     ))}
             </div>
 
-            <p className="my-2 text-xs line-clamp-2">{description}</p>
+            <p className="my-2 text-xs line-clamp-2 md:text-sm">
+                {description}
+            </p>
 
-            <div className="mb-5">
+            <div className="mb-5 font-bold">
                 <Currency quantity={price} currency="GBP" />
             </div>
 
