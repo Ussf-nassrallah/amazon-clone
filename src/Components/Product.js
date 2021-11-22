@@ -31,6 +31,8 @@ export default function Product({
             title,
             description,
             price,
+            hasPrime,
+            rating,
         };
 
         // Sending The Product as an action to the redux store...
