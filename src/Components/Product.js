@@ -44,7 +44,7 @@ export default function Product({
                     ))}
             </div>
 
-            <p className="my-2 text-xs line-clamp-2 md:text-sm">
+            <p className="my-2 text-xs line-clamp-2 md:text-sm text-gray-500">
                 {description}
             </p>
 

@@ -10,7 +10,7 @@ export default function Home() {
             <div className="bg-gray-100">
                 <Navbar />
 
-                <main className="max-w-screen-xl mx-auto">
+                <main className="max-w-screen-2xl mx-auto">
                     <Banner />
                     <ProductFeed />
                 </main>

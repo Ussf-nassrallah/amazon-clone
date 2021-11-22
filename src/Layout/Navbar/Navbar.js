@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import {
     MenuIcon,
     SearchIcon,
@@ -7,11 +9,14 @@ import {
 
 export default function Navbar() {
     return (
-        <header>
+        <header className="sticky top-0 z-50">
             {/* top nav */}
             <div className="flex items-center bg-amazon_blue p-2 flex-grow py-2">
                 {/* nav-logo */}
-                <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
+                <Link
+                    to="/"
+                    className="mt-2 flex items-center flex-grow sm:flex-grow-0"
+                >
                     <img
                         src="https://links.papareact.com/f90"
                         alt="amazon"
@@ -20,7 +25,7 @@ export default function Navbar() {
                         objectfit="contain"
                         className="cursor-pointer"
                     />
-                </div>
+                </Link>
 
                 {/* search */}
                 <div className="mx-4 hidden sm:flex items-center h-10 rounded-md flex-grow cursor-pointer bg-yellow-400 hover:bg-yellow-500">
@@ -43,14 +48,17 @@ export default function Navbar() {
                         <p className="font-bold">&Orders</p>
                     </div>
 
-                    <div className="relative link flex items-center">
+                    <Link
+                        to="/checkout"
+                        className="relative link flex items-center"
+                    >
                         <span className="absolute flex items-center justify-center top-0 right-0 md:right-5 h-4 w-4 bg-yellow-400 text-center font-bold rounded-full text-black">
                             0
                         </span>
 
                         <ShoppingCartIcon className="h-10" />
                         <p className="font-bold hidden md:inline mt-2">Cart</p>
-                    </div>
+                    </Link>
                 </div>
             </div>
             {/* bottom nav */}
